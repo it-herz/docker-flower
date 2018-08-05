@@ -1,6 +1,6 @@
 FROM debian:latest
 
-RUN apt update && apt install -y build-essential python-pip && pip install celery flower redis
+RUN apt update && apt install -y build-essential python3-pip python3 && pip install celery flower redis
 
 RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
